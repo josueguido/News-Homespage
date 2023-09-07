@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+
 /* Variables de colores */
 .root {
     --Off-white: hsl(36, 100%, 99%);
@@ -16,13 +19,11 @@ body {
     color: var(--Very-dark-blue);
     font-size: medium;
     padding: 5%;
-    height: 400px;
     width: 85%;
 }
 
 /* Estilos para la barra de navegación */
 #navbar {
-    background-color: none;
     color: hsl(233, 8%, 79%);
     padding: 5px;
     display: flex;
@@ -88,7 +89,6 @@ body {
 /* Estilos para las secciones */
 .other-section {
     background-color: hsl(36, 100%, 99%);
-    padding: 0px;
     margin-top: 20px;
     box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.1);
 }
@@ -98,6 +98,7 @@ body {
     align-items: flex-start;
     justify-content: space-between;
     padding: 10px;
+    margin-top: -10px;
 }
 
 /* Estilos para la sección anunciada */
@@ -109,7 +110,7 @@ body {
     box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
     color: var(--Off-white);
-    order: 2;
+    order: 1;
 }
 
 #announced-section div {
@@ -128,7 +129,7 @@ h2,
 h3 {
     color: hsl(233, 8%, 79%);
     font-size: 24px;
-    margin-bottom: 20px;
+    margin-bottom: 1px;
 }
 
 #announced-section h1 {
@@ -138,39 +139,50 @@ h3 {
 #announced-section h2:hover {
     cursor: pointer;
     color: darkgoldenrod;
+}
 
+
+/* Ajustar el margen inferior de las secciones superiores */
+.other-section, #announced-section {
+    margin-bottom: 2px;
 }
 
 .title {
     display: flex;
     flex-direction: column;
+    align-items: center;
     writing-mode: horizontal-tb;
     text-orientation: sideways-right;
-    height: 180px;
+    height: auto;
     font-size: 25px;
     color: var(--Dark-grayish-blue);
 }
 
-.title span {
-    margin: 10px 10px;
-    display: block;
-    line-height: 1.2;
-}
+
 
 .content {
     display: flex;
-    align-items: start;
-    flex-direction: row ;
+    flex-direction: row;
+    align-items: flex-start;
 }
 
 /* Estilos para el contenedor de la derecha */
 .content-right {
-    padding: 20px;
+    display: flex;
+    flex-direction: column;
     text-align: right;
+    align-items: flex-end; 
+    justify-content: flex-end;
+    padding: 20px;
 }
 
+
 .quote {
-    font-size: 10px;
+    display: flex;
+    text-align: end;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 13px;
     color: var(--Grayish-blue);
     line-height: 1.4;
     margin-bottom: 15px;
@@ -191,72 +203,359 @@ button:hover {
 
 /* Estilos para la sección de información */
 .information {
-    color:var(--Off-white);
+    color: var(--Off-white);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: -100px;
+    margin-bottom: 0;
+}
+
+.item {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    margin-top: 40px;
+    text-align: left;
+    margin: -5px;
+    padding: 0;
 }
 
-.information div {
-    /* Agrega estilos específicos para cada div dentro de la sección de información */
-    background-color:var(--Dark-grayish-blue);
-    padding: 20px;
-    flex-basis: 30%;
-    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.1);
-    box-sizing: border-box;
+.information .item p h2 {
+    margin-top: 0;
+}
+
+.text-container h2 {
+    /* Estilos adicionales para h2 */
+    padding: 0;
+    margin: 0;
+}
+
+.item .imagen-container {
+    margin-right: 1px;
+}
+
+.information p.paragraph-1:hover {
+    color: chocolate;
+    font-weight: 700;
+}
+
+.information p {
+    color: var(--Dark-grayish-blue);
+    margin-bottom: 3px;
+}
+
+
+.paragraph-1 {
+    color: black;
+    font-size: 15px;
+    font-family: 'Inter' , sans-serif;
+    font-weight: 700;
+}
+
+.information div img {
+    max-width: 100%;
+    height: auto;
+    margin-right: 5px;
+    width: 250px;
+}
+
+
+.text-container {
     display: flex;
-    align-items: center;
-    gap: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 10px;
 }
 
-.information h2 {
-    /* Agrega estilos específicos para los títulos de los divs de la sección de información */
-    
-    font-size: 24px;
-    margin-bottom: 10px;
-    
+.text-container p:not(.paragraph-1)  {
+    color: var(--Dark-grayish-blue);
 }
 
-.information p.paragraph-1{
-    /* Agrega estilos específicos para los párrafos de los divs de la sección de información */
-    font-size: 18px;
-    margin-top: 10px; 
-    color: var(--Very-dark-blue); 
+/* Estilo predeterminado para ambas imágenes */
+.desktop-image {
+    display: block; /* Mostrar la imagen en pantallas de escritorio */
+}
+
+.mobile-image {
+    display: none; /* Ocultar la imagen en pantallas de escritorio */
 }
 
 /* Estilos para el pie de página */
 footer {
     color: var(--Very-dark-blue);
     text-align: center;
-    padding: 10px;
+    padding: 60px;
+    font-weight: 700;
 }
 
 /* Media query para dispositivos moviles (hasta 375px) */
 @media screen and (max-width: 375px) {
+   
+
+    .desktop-image {
+        display: none; /* Ocultar la imagen en dispositivos móviles */
+    }
+
+    .mobile-image {
+        display: block; /* Mostrar la imagen en dispositivos móviles */
+    }
+
+
+    /* Estilos generales para el cuerpo */
+    body {
+        font-family: 'Inter', Arial, sans-serif;
+        background-color: hsl(36, 100%, 99%);
+        color: var(--Very-dark-blue);
+        font-size: medium;
+        padding: 5% 2%;
+        height: auto;
+        width: 100%;
+    }
+
+    /* Estilos para la barra de navegación */
     #navbar {
-        padding: 5px;
+        background-color: none;
+        color:var(--Very-dark-blue);
+        padding: 10px 5px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
 
     #navbar ul {
+        list-style: none;
+        padding: 45px;
+        margin: 25px;
+        display: flex;
         flex-direction: column;
-        align-items: flex-start;
-        margin-top: 10px;
+        align-items: center;
+        font-weight: 400;
+        font-size: 25px;
     }
 
     #navbar li {
-        margin-left: 0;
-        margin-bottom: 5px;
+        margin: 5px 0;
     }
 
     #navbar img.icono {
-        width: 15%;
+        width: 5%;
+        height: auto;
     }
-}
 
-/* Media query para pantallas más grandes (a partir de 1440px) */
-@media screen and (min-width: 1440px) {
-    #navbar {
-        padding: 20px;
+    #navbar a:hover {
+        border: none;
+        background: none;
+        font-size: 25px;
+        cursor: pointer;
+        text-decoration: none;
+        border-bottom: none;
+        color: chocolate;
     }
+
+    #navbar li a {
+        color: var(--Off-white);
+    }
+
+    #navbar img.icono {
+        order: -1;
+    }
+
+    .close {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 10px; /* Ajusta el valor de margen según sea necesario */
+    }
+
+    /* Estilos para el contenedor principal */
+    .other-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: auto;
+        order: 1;
+    }
+
+    /* Estilos para la img */
+    .other-section img {
+        max-width: 100%;
+        height: auto;
+        width: auto;
+    }
+
+    /* Estilos para las secciones */
+    .other-section {
+        background-color: hsl(36, 100%, 99%);
+        padding: 0px;
+        margin-top: 20px;
+        box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.1);
+    }
+
+    .flex-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 10px;
+    }
+
+    /* Estilos para la sección anunciada */
+    #announced-section {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+        background-color: var(--Very-dark-blue);
+        box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.1);
+        box-sizing: border-box;
+        color: var(--Off-white);
+        order: 2;
+    }
+
+    #announced-section div {
+        color: hsl(236, 13%, 42%);
+        background-color: hsl(240, 100%, 5%);
+        padding: 20px;
+        margin-right: 10px;
+        box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.1);
+        box-sizing: border-box;
+        height: auto;
+        width: auto;
+    }
+
+    #announced-section h1,
+    h2,
+    h3 {
+        color: hsl(233, 8%, 79%);
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    #announced-section h1 {
+        color: darkgoldenrod;
+    }
+
+    #announced-section h2:hover {
+        cursor: pointer;
+        color: darkgoldenrod;
+
+    }
+
+    .title {
+        display: flex;
+        text-align: start;
+        flex-direction: column;
+        height: auto;
+        font-size: 40px;
+        color: var(--Dark-grayish-blue);
+    }
+
+    .title span {
+        margin:auto;
+        display: block;
+        line-height: 1.2;
+    }
+
+    .content {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    /* Estilos para el contenedor de la derecha */
+    .content-right {
+        padding: 0;
+        display: flex;
+        align-items: start;
+        text-align: start;
+    }
+
+    .quote {
+        font-size: 12px;
+        font-weight: 400;
+        color: var(--Dark-grayish-blue);
+        line-height: 1.4;
+        margin-bottom: 15px;
+    }
+
+    button {
+        background-color: black;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: chocolate;
+    }
+
+    /* Estilos para la sección de información */
+    .information {
+        color: var(--Off-white);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 15px;
+    }
+
+
+    .item {
+        display: flex;
+        align-items: center;
+        text-align: left;
+        margin: 5px;
+    }
+
+    .information h2 {
+        /* Agrega estilos específicos para los títulos de los divs de la sección de información */
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        font-size: 20px;
+        margin-bottom: 10px;
+        padding: 10px;
+        margin: 0;
+    }
+
+    .imagen-container {
+        flex: 1;
+        padding: 0;
+        display: flex;
+        align-items: center;
+    }
+
+    .information p.paragraph-1:hover {
+        /* Agrega estilos específicos para los párrafos de los divs de la sección de información */
+        margin-top: 1px;
+        display: flex;
+        flex-direction: column;
+        color: chocolate;
+    }
+
+    .information p {
+        color: var(--Dark-grayish-blue);
+    }
+
+    .information div img {
+        max-width: 100%;
+        height: auto;
+        width: auto;
+    }
+
+    .text-container {
+        flex: 2;
+        text-align: center;
+    }
+
+    /* Estilos para el pie de página */
+    footer {
+        background-color: var(--Off-white);
+        text-align: center;
+        padding: 1px;
+        margin-top: 100px;
+    }
+
 }
