@@ -17,7 +17,7 @@
 
 <body>
     <header>
-        <nav id="navbar">
+        <nav id="navbar" class="desktop-menu">
             <img class="icono" src="./assets/images/logo.svg" />
             <img class="Hamburguer" src="./assets/images/icon-menu.svg" />
             <img class="close" src="./assets/images/icon-menu-close.svg" />
@@ -109,16 +109,16 @@
 
             // Agrega un controlador de eventos para abrir el menú
             hamburguerButton.addEventListener('click', () => {
-                menu.style.display = 'block'; // Muestra el menú
-                hamburguerButton.style.display = 'none'; // Oculta el botón Hamburguer
-                closeButton.style.display = 'block'; // Muestra el botón Close
+                menu.style.display = 'block'; 
+                hamburguerButton.style.display = 'none'; 
+                closeButton.style.display = 'block'; 
             });
 
             // Agrega un controlador de eventos para cerrar el menú
             closeButton.addEventListener('click', () => {
-                menu.style.display = 'none'; // Oculta el menú
-                closeButton.style.display = 'none'; // Oculta el botón Close
-                hamburguerButton.style.display = 'block'; // Muestra el botón Hamburguer
+                menu.style.display = 'none'; 
+                closeButton.style.display = 'none'; 
+                hamburguerButton.style.display = 'block'; 
             });
 
         </script>
@@ -126,7 +126,8 @@
     </main>
 
     <footer>
-        Code by Josue Guido B.
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Code by Josue Guido
     </footer>
 </body>
 

@@ -19,7 +19,7 @@ body {
     color: var(--Very-dark-blue);
     font-size: medium;
     padding: 5%;
-    width: 85%;
+    width: 80%;
 }
 
 /* Estilos para la barra de navegación */
@@ -39,7 +39,7 @@ body {
 }
 
 #navbar li {
-    margin-left: 38px;
+    margin-left: 40px;
 }
 
 #navbar img.icono {
@@ -65,6 +65,11 @@ body {
 
 #navbar img.icono {
     order: -1;
+}
+
+.Hamburguer,
+.close {
+    display: none;
 }
 
 /* Estilos para el contenedor principal */
@@ -104,8 +109,8 @@ body {
 /* Estilos para la sección anunciada */
 #announced-section {
     width: 33%;
-    height: 740px;
-    padding: 20px;
+    height: 730px;
+    padding: 10px;
     background-color: var(--Very-dark-blue);
     box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
@@ -143,8 +148,9 @@ h3 {
 
 
 /* Ajustar el margen inferior de las secciones superiores */
-.other-section, #announced-section {
-    margin-bottom: 2px;
+.other-section,
+#announced-section {
+    margin-bottom: -50px;
 }
 
 .title {
@@ -163,25 +169,26 @@ h3 {
 .content {
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    align-items: flex-end;
+    justify-content: space-between;
 }
 
 /* Estilos para el contenedor de la derecha */
 .content-right {
     display: flex;
     flex-direction: column;
-    text-align: right;
-    align-items: flex-end; 
-    justify-content: flex-end;
+    text-align: left;
+    align-items: flex-end;
+    justify-content: space-between;
     padding: 20px;
 }
 
 
 .quote {
     display: flex;
-    text-align: end;
-    flex-direction: column;
-    justify-content: center;
+    text-align:  center;
+    flex-direction: row;
+    justify-content: space-between;
     font-size: 13px;
     color: var(--Grayish-blue);
     line-height: 1.4;
@@ -208,14 +215,13 @@ button:hover {
     align-items: flex-start;
     justify-content: center;
     margin-top: -100px;
-    margin-bottom: 0;
+    margin-bottom: 5%;
 }
 
 .item {
     display: flex;
     align-items: center;
     text-align: left;
-    margin: -5px;
     padding: 0;
 }
 
@@ -239,15 +245,17 @@ button:hover {
 }
 
 .information p {
-    color: var(--Dark-grayish-blue);
-    margin-bottom: 3px;
+    margin-bottom: 5px;
 }
 
+.text-container p:not(.paragraph-1) {
+    color: hsl(236, 13%, 42%); 
+}
 
 .paragraph-1 {
     color: black;
     font-size: 15px;
-    font-family: 'Inter' , sans-serif;
+    font-family: 'Inter', sans-serif;
     font-weight: 700;
 }
 
@@ -267,17 +275,17 @@ button:hover {
     padding: 10px;
 }
 
-.text-container p:not(.paragraph-1)  {
-    color: var(--Dark-grayish-blue);
-}
+
 
 /* Estilo predeterminado para ambas imágenes */
 .desktop-image {
-    display: block; /* Mostrar la imagen en pantallas de escritorio */
+    display: block;
+    /* Mostrar la imagen en pantallas de escritorio */
 }
 
 .mobile-image {
-    display: none; /* Ocultar la imagen en pantallas de escritorio */
+    display: none;
+    /* Ocultar la imagen en pantallas de escritorio */
 }
 
 /* Estilos para el pie de página */
@@ -290,14 +298,31 @@ footer {
 
 /* Media query para dispositivos moviles (hasta 375px) */
 @media screen and (max-width: 375px) {
-   
+
 
     .desktop-image {
-        display: none; /* Ocultar la imagen en dispositivos móviles */
+        display: none;
+        /* Ocultar la imagen en dispositivos móviles */
     }
 
     .mobile-image {
-        display: block; /* Mostrar la imagen en dispositivos móviles */
+        display: block;
+        /* Mostrar la imagen en dispositivos móviles */
+    }
+
+    /* Oculta el menú de navegación en dispositivos móviles */
+    .desktop-menu ul {
+        display: none;
+    }
+
+    /* Muestra el icono de hamburguesa en dispositivos móviles */
+    .Hamburguer {
+        display: inline-block;
+    }
+
+    /* Oculta el ícono de cierre en dispositivos móviles */
+    .close {
+        display: none;
     }
 
 
@@ -315,8 +340,8 @@ footer {
     /* Estilos para la barra de navegación */
     #navbar {
         background-color: none;
-        color:var(--Very-dark-blue);
-        padding: 10px 5px;
+        color: var(--Very-dark-blue);
+        padding: 15px 15px;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -338,7 +363,7 @@ footer {
     }
 
     #navbar img.icono {
-        width: 5%;
+        width: auto;
         height: auto;
     }
 
@@ -364,7 +389,7 @@ footer {
         position: absolute;
         top: 0;
         right: 0;
-        margin: 10px; /* Ajusta el valor de margen según sea necesario */
+        margin: 10px;
     }
 
     /* Estilos para el contenedor principal */
@@ -402,9 +427,10 @@ footer {
 
     /* Estilos para la sección anunciada */
     #announced-section {
-        width: 100%;
+        width: auto;
         height: auto;
         padding: 20px;
+        margin-top: 10px;
         background-color: var(--Very-dark-blue);
         box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.1);
         box-sizing: border-box;
@@ -413,7 +439,6 @@ footer {
     }
 
     #announced-section div {
-        color: hsl(236, 13%, 42%);
         background-color: hsl(240, 100%, 5%);
         padding: 20px;
         margin-right: 10px;
@@ -451,7 +476,7 @@ footer {
     }
 
     .title span {
-        margin:auto;
+        margin: auto;
         display: block;
         line-height: 1.2;
     }
@@ -460,11 +485,12 @@ footer {
         display: flex;
         align-items: center;
         flex-direction: column;
+        padding: 40px;
     }
 
     /* Estilos para el contenedor de la derecha */
     .content-right {
-        padding: 0;
+        padding: 10px;
         display: flex;
         align-items: start;
         text-align: start;
@@ -473,9 +499,10 @@ footer {
     .quote {
         font-size: 12px;
         font-weight: 400;
-        color: var(--Dark-grayish-blue);
+        color: #a9a9a9;
         line-height: 1.4;
         margin-bottom: 15px;
+        text-align: start;
     }
 
     button {
@@ -517,7 +544,7 @@ footer {
         font-size: 20px;
         margin-bottom: 10px;
         padding: 10px;
-        margin: 0;
+        margin: 10px;
     }
 
     .imagen-container {
