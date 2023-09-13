@@ -15,7 +15,7 @@
 
 
 /* Media query para dispositivos moviles (hasta 375px) */
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 375px) {
 
 
     .desktop-image {
@@ -321,7 +321,7 @@
 
 /* Estilos para pantallas medianas (pantallas de escritorio y portátiles) */
 
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1500px) {
 
     #hamburger,
     #Close {
