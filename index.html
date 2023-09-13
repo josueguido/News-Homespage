@@ -19,8 +19,8 @@
     <header>
         <nav id="navbar" class="desktop-menu">
             <img class="icono" src="./assets/images/logo.svg" alt="icon" />
-            <img class="Hamburguer" src="./assets/images/icon-menu.svg" alt="button open"/>
-            <img class="close" src="./assets/images/icon-menu-close.svg" alt="button close"/>
+            <button id="hamburger">☰</button>
+            <button id="Close" style="display: none;">X</button>
             <ul>
                 <li><a href='#Home'>Home</a></li>
                 <li><a href='#New'>New</a></li>
@@ -37,9 +37,11 @@
                 <img src="./assets/images/image-web-3-mobile.jpg" class="mobile-image" />
                 <div class="content">
                     <h3 class="title">
-                        The Bright
-                        Future of
-                        Web 3.0?
+                        <strong>
+                            Bright
+                            Future of
+                            Web 3.0?
+                        </strong>
                     </h3>
                     <div class="content-right">
                         <p class="quote">
@@ -101,34 +103,13 @@
             </div>
         </section>
 
-        <script>
-            // Obtén referencias a los elementos relevantes
-            const hamburguerButton = document.querySelector('.Hamburguer');
-            const closeButton = document.querySelector('.close');
-            const menu = document.querySelector('ul');
-
-            // Agrega un controlador de eventos para abrir el menú
-            hamburguerButton.addEventListener('click', () => {
-                menu.style.display = 'flex'; 
-                hamburguerButton.style.display = 'none'; 
-                closeButton.style.display = 'block'; 
-            });
-
-            // Agrega un controlador de eventos para cerrar el menú
-            closeButton.addEventListener('click', () => {
-                menu.style.display = 'none'; 
-                closeButton.style.display = 'none'; 
-                hamburguerButton.style.display = 'block'; 
-            });
-
-        </script>
-
     </main>
 
     <footer>
         Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
         Code by Josue Guido
     </footer>
+    <script src="main.js"></script>
 </body>
 
 </html>
