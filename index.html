@@ -70,7 +70,7 @@
 
         <section class="information">
             <div class="item">
-                <div class="image-container">
+                <div class="imagen-container">
                     <img src="assets/images/image-retro-pcs.jpg" alt="Retro PC">
                 </div>
                 <div class="text-container">
@@ -80,7 +80,7 @@
                 </div>
             </div>
             <div class="item">
-                <div class="image-container">
+                <div class="imagen-container">
                     <img src="assets/images/image-top-laptops.jpg" alt="Top Laptops">
                 </div>
                 <div class="text-container">
@@ -90,7 +90,7 @@
                 </div>
             </div>
             <div class="item">
-                <div class="image-container">
+                <div class="imagen-container">
                     <img src="assets/images/image-gaming-growth.jpg" alt="Growth of Gaming">
                 </div>
                 <div class="text-container">
@@ -109,9 +109,10 @@
 
             // Agrega un controlador de eventos para abrir el menú
             hamburguerButton.addEventListener('click', () => {
-                menu.style.display = 'block'; 
+                menu.style.display = 'flex'; 
                 hamburguerButton.style.display = 'none'; 
                 closeButton.style.display = 'block'; 
+                menu.classList.add('solid-background');
             });
 
             // Agrega un controlador de eventos para cerrar el menú
@@ -119,6 +120,7 @@
                 menu.style.display = 'none'; 
                 closeButton.style.display = 'none'; 
                 hamburguerButton.style.display = 'block'; 
+                menu.classList.remove('solid-background');
             });
 
         </script>
