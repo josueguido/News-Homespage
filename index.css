@@ -299,7 +299,7 @@ footer {
 }
 
 /* Media query para dispositivos moviles (hasta 375px) */
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 400px) {
 
 
     .desktop-image {
@@ -363,10 +363,7 @@ footer {
         font-size: 25px;
     }
 
-    .solid-background {
-        background-color: var(--Grayish-blue); /* Reemplaza "your-color" con el color que desees */
-        width: 50%;
-    }
+   
     
     #navbar li {
         margin: 5px 0;
