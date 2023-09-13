@@ -315,7 +315,7 @@
 
 /* Estilos para pantallas medianas (pantallas de escritorio y portátiles) */
 
-@media screen and (min-width: 1500px) {
+@media screen and (min-width: 1025px) {
 
     #hamburger,
     #Close {
