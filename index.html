@@ -18,9 +18,9 @@
 <body>
     <header>
         <nav id="navbar" class="desktop-menu">
-            <img class="icono" src="./assets/images/logo.svg" />
-            <img class="Hamburguer" src="./assets/images/icon-menu.svg" />
-            <img class="close" src="./assets/images/icon-menu-close.svg" />
+            <img class="icono" src="./assets/images/logo.svg" alt="icon" />
+            <img class="Hamburguer" src="./assets/images/icon-menu.svg" alt="button open"/>
+            <img class="close" src="./assets/images/icon-menu-close.svg" alt="button close"/>
             <ul>
                 <li><a href='#Home'>Home</a></li>
                 <li><a href='#New'>New</a></li>
@@ -112,7 +112,6 @@
                 menu.style.display = 'flex'; 
                 hamburguerButton.style.display = 'none'; 
                 closeButton.style.display = 'block'; 
-                menu.classList.add('solid-background');
             });
 
             // Agrega un controlador de eventos para cerrar el menú
@@ -120,7 +119,6 @@
                 menu.style.display = 'none'; 
                 closeButton.style.display = 'none'; 
                 hamburguerButton.style.display = 'block'; 
-                menu.classList.remove('solid-background');
             });
 
         </script>
