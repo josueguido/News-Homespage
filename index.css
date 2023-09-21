@@ -15,7 +15,7 @@
 
 
 /* Media query para dispositivos moviles (hasta 375px) */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 375px) {
 
 
     .desktop-image {
@@ -346,7 +346,8 @@
         color: var(--Very-dark-blue);
         font-size: medium;
         padding: 3%;
-        width: 1096px;
+        width: auto;
+        min-height: 100vh
     }
 
     /* Estilos para la barra de navegación */
