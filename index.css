@@ -615,3 +615,307 @@
     }
 
 }
+
+@media only screen and (min-width: 766px) and (max-width: 999px) {
+    /* Estilos para el rango de pantalla de 700px a 1035px */
+    /* Aquí puedes definir tus estilos específicos para este rango */
+    
+
+    .desktop-image {
+        display: none;
+        /* Ocultar la imagen en dispositivos móviles */
+    }
+
+    .mobile-image {
+        display: block;
+        /* Mostrar la imagen en dispositivos móviles */
+    }
+
+    /* Oculta el menú de navegación en dispositivos móviles */
+    .desktop-menu ul {
+        display: none;
+
+
+    }
+
+    /* Muestra el icono de hamburguesa en dispositivos móviles */
+    .hamburguer {
+        display: inline-block;
+    }
+
+    #Close {
+        position: absolute;
+        top: 10px;
+        /* Ajusta la distancia desde la parte superior */
+        right: 10px;
+        /* Ajusta la distancia desde la derecha */
+        display: none;
+    }
+
+
+    /* Estilos generales para el cuerpo */
+    body {
+        font-family: 'Inter', Arial, sans-serif;
+        background-color: hsl(36, 100%, 99%);
+        color: var(--Very-dark-blue);
+        font-size: medium;
+        padding: 5% 2%;
+        height: auto;
+        width: 100%;
+    }
+
+    /* Estilos para la barra de navegación */
+    #navbar {
+        background-color: none;
+        color: var(--Very-dark-blue);
+        padding: 15px 15px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #navbar ul {
+        list-style: none;
+        padding: 45px;
+        margin: 25px;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        font-weight: 400;
+        font-size: 1.5rem;
+    }
+
+
+
+    #navbar li {
+        margin: 5px 0;
+    }
+
+    #navbar img.icono {
+        width: auto;
+        height: auto;
+    }
+
+    #navbar a:hover {
+        border: none;
+        background: none;
+        font-size: 1.6rem;
+        cursor: pointer;
+        text-decoration: none;
+        border-bottom: none;
+        color: chocolate;
+    }
+
+    #navbar li a {
+        color: var(--Off-white);
+    }
+
+    #navbar img.icono {
+        order: -1;
+    }
+
+    .close {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 10px;
+    }
+
+    /* Estilos para el contenedor principal */
+    .other-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: auto;
+        order: 1;
+    }
+
+    /* Estilos para la img */
+    .other-section img {
+        max-width: 100%;
+        height: auto;
+        width: auto;
+    }
+
+    /* Estilos para las secciones */
+    .other-section {
+        background-color: hsl(36, 100%, 99%);
+        padding: 0px;
+        margin-top: 20px;
+        box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.1);
+    }
+
+    .flex-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 10px;
+    }
+
+    /* Estilos para la sección anunciada */
+    #announced-section {
+        width: auto;
+        height: auto;
+        padding: 20px;
+        margin-top: 10px;
+        background-color: var(--Very-dark-blue);
+        box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.1);
+        box-sizing: border-box;
+        color: var(--Off-white);
+        order: 2;
+    }
+
+    #announced-section div {
+        background-color: hsl(240, 100%, 5%);
+        padding: 20px;
+        margin-right: 10px;
+        box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.1);
+        box-sizing: border-box;
+        height: auto;
+        width: auto;
+    }
+
+    #announced-section p {
+        color: hsl(236, 13%, 42%);
+    }
+
+    #announced-section h1,
+    h2,
+    h3 {
+        color: hsl(233, 8%, 79%);
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+
+    #announced-section h1 {
+        color: darkgoldenrod;
+    }
+
+    #announced-section h2:hover {
+        cursor: pointer;
+        color: darkgoldenrod;
+
+    }
+
+    .title {
+        display: flex;
+        text-align: start;
+        flex-direction: column;
+        height: auto;
+        font-size: 2.5rem;
+        color: var(--Dark-grayish-blue);
+    }
+
+    .title span {
+        margin: auto;
+        display: block;
+        line-height: 1.2;
+    }
+
+    .content {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 40px;
+    }
+
+    /* Estilos para el contenedor de la derecha */
+    .content-right {
+        padding: 10px;
+        display: flex;
+        align-items:flex-end;
+        text-align:start;
+    }
+
+    .quote {
+        font-size: 0.75rem;
+        font-weight: 400;
+        color: #a9a9a9;
+        line-height: 1.4;
+        margin-bottom: 15px;
+        text-align: start;
+    }
+
+    button {
+        background-color: black;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: chocolate;
+    }
+
+    /* Estilos para la sección de información */
+    .information {
+        color: var(--Off-white);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 10px;
+    }
+
+
+    .item {
+        display: flex;
+        align-items: center;
+        text-align: left;
+        margin: 5px;
+    }
+
+    .information h2 {
+        /* Agrega estilos específicos para los títulos de los divs de la sección de información */
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        font-size: 1.25rem;
+        margin-bottom: 10px;
+        padding: 10px;
+        margin: 10px;
+    }
+
+    .imagen-container {
+        flex: 1;
+        padding: 0;
+        display: flex;
+        align-items: start;
+    }
+
+    .information p.paragraph-1:hover {
+        /* Agrega estilos específicos para los párrafos de los divs de la sección de información */
+        margin-top: 1px;
+        display: flex;
+        flex-direction: column;
+        color: chocolate;
+    }
+
+    .information p {
+        color: var(--Dark-grayish-blue);
+    }
+
+    .information div img {
+        max-width: 100%;
+        height: auto;
+        width: auto;
+    }
+
+    .text-container {
+        flex: 2;
+        text-align: center;
+    }
+
+    /* Estilos para el pie de página */
+    footer {
+        background-color: var(--Off-white);
+        text-align: center;
+        padding: 1px;
+        margin-top: 100px;
+    }
+  }
+  
