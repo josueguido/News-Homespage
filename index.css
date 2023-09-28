@@ -15,7 +15,7 @@
 
 
 /* Media query para dispositivos moviles (hasta 375px) */
-@media screen and (max-width: 375px) {
+@media only screen and (max-width: 375px) {
 
 
     .desktop-image {
@@ -337,6 +337,18 @@
     .mobile-image {
         display: none;
         /* Ocultar la imagen en pantallas de escritorio */
+    }
+
+    /* Oculta el menú de navegación en dispositivos móviles */
+    .desktop-menu ul {
+        display: none;
+
+
+    }
+
+    /* Muestra el icono de hamburguesa en dispositivos móviles */
+    .hamburguer {
+        display: inline-block;
     }
 
     /* Estilos generales para el cuerpo */
